@@ -1,0 +1,131 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #333;
+    color: white;
+}
+
+header h2 {
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Container */
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Product Grid */
+/* Product Grid */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adds space between product cards */
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Product Card */
+.product-card {
+    border: 1px solid #ddd;
+    background: white;
+    padding: 15px;
+    width: calc(33.333% - 20px); /* 3 items per row with gap */
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+.product-card img {
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.product-card h3 {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.product-card p {
+    font-size: 16px;
+    color: #555;
+    margin: 5px 0;
+}
+
+.product-card button {
+    background: #28a745;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.product-card button:hover {
+    background: #218838;
+}
+
+
+/* Cart Page */
+.cart-container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: white;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.cart-item button {
+    background: #dc3545;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cart-item button:hover {
+    background: #c82333;
+}
+
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <h2>Shop</h2>
+    <div id="product-list"></div>
+
+    <script>
+        $(document).ready(function() {
+            $.ajax({
+                url: "http://127.0.0.1:8000/api/products",
+                method: "GET",
+                success: function(response) {
+                    let output = "";
+                    response.forEach(product => {
+                        output += `
+                            <div>
+                                <h3>${product.name}</h3>
+                                <p>Price: $${product.price}</p>
+                                <button class="add-to-cart" data-id="${product.id}">Add to Cart</button>
+                            </div>
+                        `;
+                    });
+                    $("#product-list").html(output);
+                }
+            });
+
+            $(document).on("click", ".add-to-cart", function() {
+                let productId = $(this).data("id");
+                $.ajax({
+                    url: "http://127.0.0.1:8000/api/cart",
+                    method: "POST",
+                    data: { product_id: productId },
+                    headers: { Authorization: "Bearer " + localStorage.getItem("token") },
+                    success: function(response) {
+                        alert("Added to cart!");
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

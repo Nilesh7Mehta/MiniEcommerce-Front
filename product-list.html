@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Toastr for Notifications -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+    <!-- Custom CSS & JS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+
+  
+</head>
+<body>
+
+    <!-- Include Header -->
+    <div id="header"></div>
+
+    <div class="container mt-5">
+        <h2 class="text-center">Product List</h2>
+
+        <!-- Add Product Button -->
+        <div class="text-right mb-3">
+            <a href="add-products.html" class="btn btn-success">Add Product</a>
+        </div>
+
+        <!-- Product Table -->
+        <table class="table table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    
+                    <th>Price</th>
+                    <th>Stock</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="product-list">
+                <!-- Products will be dynamically inserted here -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Include Footer -->
+    <div id="footer"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  
