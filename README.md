@@ -22,3 +22,10 @@ This repository handles the frontend of the e-commerce system.
 - Toastr (for notifications)
 - Laravel API integration
 
+###Set Up Installation
+-Clone the Repository 
+-Install Dependencies
+-Configure Environment (.env)
+-Run Migrations
+-Start the Server
+
